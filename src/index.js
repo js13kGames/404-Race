@@ -47,8 +47,10 @@ once(window, 'load', function init() {
         controls.center[0] = innerWidth - 150;
         controls.center[1] = innerHeight - 150;
 
-        glCanvas.width = innerWidth * devicePixelRatio;
-        glCanvas.height = innerHeight * devicePixelRatio;
+        // High pixel ratio freezes big screens.
+        // And for the game jam no time to create a fallback.
+        glCanvas.width = innerWidth; // * devicePixelRatio;
+        glCanvas.height = innerHeight; // * devicePixelRatio;
         debugCanvas.width = innerWidth;
         debugCanvas.height = innerHeight;
         webgl.resize();
