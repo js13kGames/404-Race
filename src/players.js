@@ -145,7 +145,7 @@ class Player {
 class LevelService {
     constructor() {
         this.startTime = 0;
-        this.index = 3;
+        this.index = 0;
         this.prevIndex = -1;
         this.levels = ['desert', 'maze', 'forest', 'arena'];
         this.level = null;
